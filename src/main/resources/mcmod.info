@@ -1,0 +1,16 @@
+[
+{
+  "modid": "UselessThings",
+  "name": "Useless Things",
+  "description": "A mod adding blocks and items.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Juuxel"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
