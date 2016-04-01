@@ -1,0 +1,6 @@
+{
+    "parent": "uselessthings:block/platform",
+    "textures": {
+        "texture": "blocks/planks_oak"
+    }
+}

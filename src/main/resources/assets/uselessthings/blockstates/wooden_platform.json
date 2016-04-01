@@ -1,0 +1,6 @@
+{
+    "multipart": [
+        { "apply": { "model": "uselessthings:wooden_platform" } },
+        { "when": { "fence": true }, "apply": { "model": "oak_fence_post" } }
+    ]
+}

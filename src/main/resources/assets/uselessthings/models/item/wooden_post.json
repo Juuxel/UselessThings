@@ -1,0 +1,6 @@
+{
+    "parent": "uselessthings:item/fence_post",
+    "textures": {
+        "texture": "blocks/planks_oak"
+    }
+}

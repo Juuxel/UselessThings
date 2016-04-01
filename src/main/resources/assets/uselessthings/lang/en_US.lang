@@ -1,0 +1,8 @@
+# Blocks
+tile.uselessthings.wooden_platform.name=Wooden Platform
+tile.uselessthings.fenced_wooden_platform.name=Fenced Wooden Platform
+tile.uselessthings.wooden_step.name=Wooden Step
+tile.uselessthings.wooden_post.name=Wooden Post
+
+# Creative tabs
+itemGroup.uselessthings=Useless Things
