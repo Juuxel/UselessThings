@@ -18,6 +18,8 @@ public class BlockWoodenStep extends BlockUT
 
         setStepSound(SoundType.WOOD);
         setName(LibBlockNames.WOODEN_STEP);
+        setHardness(1.5F);
+        setResistance(5.0F);
     }
 
     @Override

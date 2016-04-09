@@ -16,6 +16,12 @@ public class TabUT extends CreativeTabs
     @Override
     public Item getTabIconItem()
     {
-        return Item.getItemFromBlock(ModBlocks.fencedWoodenPlatform);
+        return Item.getItemFromBlock(ModBlocks.woodenPlatform);
+    }
+
+    @Override
+    public int getIconItemDamage()
+    {
+        return 1;
     }
 }

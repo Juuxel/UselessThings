@@ -1,8 +1,13 @@
 # Blocks
 tile.uselessthings.wooden_platform.name=Wooden Platform
-tile.uselessthings.fenced_wooden_platform.name=Fenced Wooden Platform
+tile.uselessthings.wooden_platform.fenced.name=Fenced Wooden Platform
 tile.uselessthings.wooden_step.name=Wooden Step
-tile.uselessthings.wooden_post.name=Wooden Post
+tile.uselessthings.wooden_post.oak.name=Oak Post
+tile.uselessthings.wooden_post.spruce.name=Spruce Post
+tile.uselessthings.wooden_post.birch.name=Birch Post
+tile.uselessthings.wooden_post.jungle.name=Jungle Post
+tile.uselessthings.wooden_post.acacia.name=Acacia Post
+tile.uselessthings.wooden_post.dark_oak.name=Dark Oak Post
 
 # Creative tabs
 itemGroup.uselessthings=Useless Things

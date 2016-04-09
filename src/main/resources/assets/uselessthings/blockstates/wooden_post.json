@@ -1,5 +1,10 @@
 {
-    "variants": {
-        "normal": { "model": "oak_fence_post" }
-    }
+    "multipart": [
+        { "when": { "variant": "oak"      }, "apply": { "model": "oak_fence_post"      } },
+        { "when": { "variant": "spruce"   }, "apply": { "model": "spruce_fence_post"   } },
+        { "when": { "variant": "birch"    }, "apply": { "model": "birch_fence_post"    } },
+        { "when": { "variant": "jungle"   }, "apply": { "model": "jungle_fence_post"   } },
+        { "when": { "variant": "acacia"   }, "apply": { "model": "acacia_fence_post"   } },
+        { "when": { "variant": "dark_oak" }, "apply": { "model": "dark_oak_fence_post" } }
+    ]
 }
