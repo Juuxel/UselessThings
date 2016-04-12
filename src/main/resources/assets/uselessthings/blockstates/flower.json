@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "variant=rose":        { "model": "uselessthings:rose"        },
+        "variant=short_peony": { "model": "uselessthings:short_peony" }
+    }
+}

@@ -14,7 +14,7 @@ public class BlockUT extends Block
 {
     public BlockUT()
     {
-        this(Material.rock);
+        this(Material.ROCK);
     }
 
     public BlockUT(Material material)

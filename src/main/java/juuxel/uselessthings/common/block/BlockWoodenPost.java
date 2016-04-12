@@ -22,6 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
+// TODO Fix variants
 public class BlockWoodenPost extends BlockUT
 {
     public static PropertyEnum<BlockPlanks.EnumType> VARIANT = PropertyEnum.create("variant", BlockPlanks.EnumType.class);
@@ -30,9 +31,9 @@ public class BlockWoodenPost extends BlockUT
 
     public BlockWoodenPost()
     {
-        super(Material.wood);
+        super(Material.WOOD);
 
-        setStepSound(SoundType.WOOD);
+        setSoundType(SoundType.WOOD);
         setName(LibBlockNames.WOODEN_POST);
         setDefaultState(getBlockState().getBaseState().withProperty(VARIANT, BlockPlanks.EnumType.OAK));
         setHardness(2.0F);

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "particle": "blocks/flower_paeonia",
+        "cross": "blocks/flower_paeonia"
+    }
+}

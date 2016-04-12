@@ -3,7 +3,7 @@ package juuxel.uselessthings.common.block.item;
 import juuxel.uselessthings.lib.LibBlockNames;
 import net.minecraft.block.Block;
 
-public class ItemBlockFenced extends ItemBlockUT
+public class ItemBlockFenced extends ItemBlockMulti
 {
     public ItemBlockFenced(Block block)
     {

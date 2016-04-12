@@ -2,6 +2,7 @@ package juuxel.uselessthings.common.init;
 
 import juuxel.uselessthings.common.util.BlockUtils;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -20,5 +21,8 @@ public class ModRecipes
         {
             GameRegistry.addRecipe(new ItemStack(woodenPost, 4, type.getMetadata()), "F", "F", 'F', new ItemStack(BlockUtils.getFence(type)));
         }
+
+        GameRegistry.addRecipe(new ItemStack(Items.DYE, 1, 1), "R", 'R', new ItemStack(ModBlocks.flower, 1, 0));
+        GameRegistry.addRecipe(new ItemStack(Items.DYE, 1, 9), "P", 'P', new ItemStack(ModBlocks.flower, 1, 1));
     }
 }

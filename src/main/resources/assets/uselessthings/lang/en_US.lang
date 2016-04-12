@@ -8,6 +8,8 @@ tile.uselessthings.wooden_post.birch.name=Birch Post
 tile.uselessthings.wooden_post.jungle.name=Jungle Post
 tile.uselessthings.wooden_post.acacia.name=Acacia Post
 tile.uselessthings.wooden_post.dark_oak.name=Dark Oak Post
+tile.uselessthings.flower.rose.name=Rose
+tile.uselessthings.flower.short_peony.name=Short Peony
 
 # Creative tabs
 itemGroup.uselessthings=Useless Things

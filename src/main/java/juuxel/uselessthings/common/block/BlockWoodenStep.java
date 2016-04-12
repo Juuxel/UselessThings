@@ -14,9 +14,9 @@ public class BlockWoodenStep extends BlockUT
 
     public BlockWoodenStep()
     {
-        super(Material.wood);
+        super(Material.WOOD);
 
-        setStepSound(SoundType.WOOD);
+        setSoundType(SoundType.WOOD);
         setName(LibBlockNames.WOODEN_STEP);
         setHardness(1.5F);
         setResistance(5.0F);

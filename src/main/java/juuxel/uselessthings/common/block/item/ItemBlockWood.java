@@ -3,7 +3,7 @@ package juuxel.uselessthings.common.block.item;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPlanks;
 
-public class ItemBlockWood extends ItemBlockUT
+public class ItemBlockWood extends ItemBlockMulti
 {
     public ItemBlockWood(Block block)
     {

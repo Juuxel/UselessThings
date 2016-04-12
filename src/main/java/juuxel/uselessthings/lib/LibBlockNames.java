@@ -6,6 +6,7 @@ public final class LibBlockNames
     public static final String WOODEN_PLATFORM = "wooden_platform";
     public static final String WOODEN_STEP = "wooden_step";
     public static final String WOODEN_POST = "wooden_post";
+    public static final String FLOWER = "flower";
 
     // Postfixes
     public static final String FENCED_POSTFIX = "_fenced";

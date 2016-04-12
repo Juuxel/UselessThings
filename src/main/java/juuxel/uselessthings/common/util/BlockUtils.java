@@ -11,19 +11,19 @@ public final class BlockUtils
         switch (type)
         {
             case OAK:
-                return Blocks.oak_fence;
+                return Blocks.OAK_FENCE;
             case SPRUCE:
-                return Blocks.spruce_fence;
+                return Blocks.SPRUCE_FENCE;
             case BIRCH:
-                return Blocks.birch_fence;
+                return Blocks.BIRCH_FENCE;
             case JUNGLE:
-                return Blocks.jungle_fence;
+                return Blocks.JUNGLE_FENCE;
             case ACACIA:
-                return Blocks.acacia_fence;
+                return Blocks.ACACIA_FENCE;
             case DARK_OAK:
-                return Blocks.dark_oak_fence;
+                return Blocks.DARK_OAK_FENCE;
             default:
-                return Blocks.oak_fence;
+                return Blocks.OAK_FENCE;
         }
     }
 }

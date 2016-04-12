@@ -8,11 +8,11 @@ public class ModOreDict
     public static void init()
     {
         OreDictionary.registerOre("fenceWood", ModBlocks.woodenPost);
-        OreDictionary.registerOre("fenceWood", Blocks.oak_fence);
-        OreDictionary.registerOre("fenceWood", Blocks.spruce_fence);
-        OreDictionary.registerOre("fenceWood", Blocks.birch_fence);
-        OreDictionary.registerOre("fenceWood", Blocks.jungle_fence);
-        OreDictionary.registerOre("fenceWood", Blocks.acacia_fence);
-        OreDictionary.registerOre("fenceWood", Blocks.dark_oak_fence);
+        OreDictionary.registerOre("fenceWood", Blocks.OAK_FENCE);
+        OreDictionary.registerOre("fenceWood", Blocks.SPRUCE_FENCE);
+        OreDictionary.registerOre("fenceWood", Blocks.BIRCH_FENCE);
+        OreDictionary.registerOre("fenceWood", Blocks.JUNGLE_FENCE);
+        OreDictionary.registerOre("fenceWood", Blocks.ACACIA_FENCE);
+        OreDictionary.registerOre("fenceWood", Blocks.DARK_OAK_FENCE);
     }
 }

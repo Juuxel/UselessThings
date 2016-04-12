@@ -22,29 +22,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
+// TODO Fix variants
 public class BlockWoodenPlatform extends BlockUT
 {
     public static PropertyBool FENCE = PropertyBool.create("fence");
-    public static PropertyBool VISUAL_FENCE = PropertyBool.create("visual_fence");
 
     private static final AxisAlignedBB BOUNDS = new AxisAlignedBB(0, 0.75, 0, 1, 1, 1);
     private static final AxisAlignedBB POST = new AxisAlignedBB(0.375, 0, 0.375, 0.625, 1, 0.625);
 
     public BlockWoodenPlatform()
     {
-        super(Material.wood);
+        super(Material.WOOD);
 
-        setStepSound(SoundType.WOOD);
+        setSoundType(SoundType.WOOD);
         setName(LibBlockNames.WOODEN_PLATFORM);
-        setDefaultState(getBlockState().getBaseState().withProperty(FENCE, false).withProperty(VISUAL_FENCE, false));
+        setDefaultState(getBlockState().getBaseState().withProperty(FENCE, false));
         setHardness(1.5F);
         setResistance(5.0F);
-    }
-
-    @Override
-    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
-    {
-        return state.withProperty(VISUAL_FENCE, hasFence(state, worldIn, pos));
     }
 
     @Override
@@ -68,7 +62,7 @@ public class BlockWoodenPlatform extends BlockUT
     @Override
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, FENCE, VISUAL_FENCE);
+        return new BlockStateContainer(this, FENCE);
     }
 
     @Override
@@ -86,16 +80,15 @@ public class BlockWoodenPlatform extends BlockUT
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {
-        return hasFence(state, source, pos) ? FULL_BLOCK_AABB : BOUNDS;
+        return state.getValue(FENCE) ? FULL_BLOCK_AABB : BOUNDS;
     }
 
     @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB boundingBox, List<AxisAlignedBB> list, Entity entity)
     {
-        state = getActualState(state, worldIn, pos);
         addCollisionBoxToList(pos, boundingBox, list, BOUNDS);
 
-        if (state.getValue(VISUAL_FENCE))
+        if (state.getValue(FENCE))
             addCollisionBoxToList(pos, boundingBox, list, POST);
     }
 
@@ -114,10 +107,5 @@ public class BlockWoodenPlatform extends BlockUT
         {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), i, new ModelResourceLocation(getRegistryName() + (i == 1 ? LibBlockNames.FENCED_POSTFIX : ""), "inventory"));
         }
-    }
-
-    private boolean hasFence(IBlockState state, IBlockAccess worldIn, BlockPos pos)
-    {
-        return worldIn.getBlockState(pos.down()).getBlock() instanceof BlockFence || worldIn.getBlockState(pos.down()).getBlock() instanceof BlockWoodenPost || state.getValue(FENCE);
     }
 }

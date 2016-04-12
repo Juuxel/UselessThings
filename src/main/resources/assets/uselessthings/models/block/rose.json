@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "particle": "uselessthings:blocks/rose",
+        "cross": "uselessthings:blocks/rose"
+    }
+}

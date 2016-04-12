@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = LibMisc.ID, name = LibMisc.NAME, version = LibMisc.VERSION, useMetadata = true)
+@Mod(modid = LibMisc.ID, name = LibMisc.NAME, version = LibMisc.VERSION, guiFactory = LibMisc.GUI_FACTORY, useMetadata = true)
 public class UselessThings
 {
     @SidedProxy(
