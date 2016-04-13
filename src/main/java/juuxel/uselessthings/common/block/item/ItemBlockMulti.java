@@ -13,6 +13,8 @@ public class ItemBlockMulti extends ItemBlockUT
     {
         super(block);
 
+        setHasSubtypes(true);
+        setMaxDamage(0);
         this.function = function;
     }
 

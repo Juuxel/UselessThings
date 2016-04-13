@@ -1,16 +1,12 @@
 package juuxel.uselessthings.common.block;
 
+import juuxel.uselessthings.common.util.IBlock;
 import juuxel.uselessthings.lib.LibMisc;
 import juuxel.uselessthings.lib.TabUT;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockUT extends Block
+public class BlockUT extends Block implements IBlock
 {
     public BlockUT()
     {
@@ -27,11 +23,5 @@ public class BlockUT extends Block
     {
         setUnlocalizedName(LibMisc.ID_LOWER + "." + name);
         setRegistryName(name);
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void initModel()
-    {
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 }

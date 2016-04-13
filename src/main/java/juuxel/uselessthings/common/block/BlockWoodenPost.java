@@ -1,7 +1,7 @@
 package juuxel.uselessthings.common.block;
 
+import juuxel.uselessthings.common.util.IBlockWithVariants;
 import juuxel.uselessthings.lib.LibBlockNames;
-import juuxel.uselessthings.lib.LibMisc;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -9,21 +9,18 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-// TODO Fix variants
-public class BlockWoodenPost extends BlockUT
+public class BlockWoodenPost extends BlockUT implements IBlockWithVariants<BlockPlanks.EnumType>
 {
     public static PropertyEnum<BlockPlanks.EnumType> VARIANT = PropertyEnum.create("variant", BlockPlanks.EnumType.class);
 
@@ -102,14 +99,18 @@ public class BlockWoodenPost extends BlockUT
     @SideOnly(Side.CLIENT)
     public void initModel()
     {
-        for (int i = 0; i < BlockPlanks.EnumType.values().length; i++)
-        {
-            ModelLoader.setCustomModelResourceLocation(
-                Item.getItemFromBlock(this), i,
-                new ModelResourceLocation(
-                    LibMisc.ID_LOWER + ":" + BlockPlanks.EnumType.values()[i].getName() + LibBlockNames.POST_POSTFIX, "inventory"
-                )
-            );
-        }
+        IBlockWithVariants.super.initModel();
+    }
+
+    @Override
+    public PropertyEnum<BlockPlanks.EnumType> getVariantProperty()
+    {
+        return VARIANT;
+    }
+
+    @Override
+    public String getModelName(BlockPlanks.EnumType enumType)
+    {
+        return enumType.getName() + LibBlockNames.POST_POSTFIX;
     }
 }
