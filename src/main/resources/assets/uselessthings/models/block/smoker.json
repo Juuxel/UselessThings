@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "particle": "blocks/brick",
+        "bottom": "blocks/brick",
+        "top": "uselessthings:blocks/smoker_top"
+    }
+}

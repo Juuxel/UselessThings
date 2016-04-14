@@ -7,7 +7,7 @@ public class ModOreDict
 {
     public static void init()
     {
-        OreDictionary.registerOre("fenceWood", ModBlocks.woodenPost);
+        OreDictionary.registerOre("fenceWood", ModBlocks.woodenPost.asBlock());
         OreDictionary.registerOre("fenceWood", Blocks.OAK_FENCE);
         OreDictionary.registerOre("fenceWood", Blocks.SPRUCE_FENCE);
         OreDictionary.registerOre("fenceWood", Blocks.BIRCH_FENCE);

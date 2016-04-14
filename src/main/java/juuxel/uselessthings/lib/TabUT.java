@@ -4,7 +4,7 @@ import juuxel.uselessthings.common.init.ModBlocks;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class TabUT extends CreativeTabs
+public final class TabUT extends CreativeTabs
 {
     public static final TabUT TAB_UT = new TabUT();
 
@@ -16,7 +16,7 @@ public class TabUT extends CreativeTabs
     @Override
     public Item getTabIconItem()
     {
-        return Item.getItemFromBlock(ModBlocks.woodenPlatform);
+        return Item.getItemFromBlock(ModBlocks.woodenPlatform.asBlock());
     }
 
     @Override

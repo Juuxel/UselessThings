@@ -1,6 +1,6 @@
 package juuxel.uselessthings.common.block;
 
-import juuxel.uselessthings.common.util.IBlockWithVariants;
+import juuxel.uselessthings.common.util.IVariantBlock;
 import juuxel.uselessthings.lib.LibBlockNames;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.SoundType;
@@ -20,7 +20,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-public class BlockWoodenPost extends BlockUT implements IBlockWithVariants<BlockPlanks.EnumType>
+public class BlockWoodenPost extends BlockUT implements IVariantBlock.Default<BlockPlanks.EnumType>
 {
     public static PropertyEnum<BlockPlanks.EnumType> VARIANT = PropertyEnum.create("variant", BlockPlanks.EnumType.class);
 
@@ -99,7 +99,7 @@ public class BlockWoodenPost extends BlockUT implements IBlockWithVariants<Block
     @SideOnly(Side.CLIENT)
     public void initModel()
     {
-        IBlockWithVariants.super.initModel();
+        IVariantBlock.Default.super.initModel();
     }
 
     @Override

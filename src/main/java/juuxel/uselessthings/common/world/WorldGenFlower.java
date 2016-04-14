@@ -1,6 +1,7 @@
 package juuxel.uselessthings.common.world;
 
 import juuxel.uselessthings.common.util.Config;
+import juuxel.uselessthings.common.util.IBlock;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;
@@ -19,9 +20,9 @@ public class WorldGenFlower
     private final BlockBush block;
     private final IBlockState state;
 
-    public WorldGenFlower(BlockBush block, IBlockState blockState)
+    public WorldGenFlower(IBlock<BlockBush> block, IBlockState blockState)
     {
-        this.block = block;
+        this.block = block.asBlock();
         state = blockState;
     }
 

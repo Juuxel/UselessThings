@@ -1,8 +1,8 @@
 package juuxel.uselessthings.common.block;
 
-import juuxel.uselessthings.common.util.IBlockWithVariants;
+import juuxel.uselessthings.common.util.ISimpleEnum;
+import juuxel.uselessthings.common.util.IVariantBlock;
 import juuxel.uselessthings.lib.LibBlockNames;
-import juuxel.uselessthings.lib.LibMisc;
 import juuxel.uselessthings.lib.TabUT;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
@@ -14,7 +14,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
@@ -24,14 +23,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-public class BlockFlower2 extends BlockBush implements IBlockWithVariants<BlockFlower2.Type>
+public class BlockFlower2 extends BlockBush implements IVariantBlock<BlockFlower2.Type, BlockBush>
 {
     public static PropertyEnum<Type> VARIANT = PropertyEnum.create("variant", Type.class);
 
     public BlockFlower2()
     {
-        setUnlocalizedName(LibMisc.ID_LOWER + "." + LibBlockNames.FLOWER);
-        setRegistryName(LibBlockNames.FLOWER);
+        setName(LibBlockNames.FLOWER);
         setDefaultState(getBlockState().getBaseState().withProperty(VARIANT, Type.ROSE));
         setCreativeTab(TabUT.TAB_UT);
         setSoundType(SoundType.PLANT);
@@ -96,24 +94,16 @@ public class BlockFlower2 extends BlockBush implements IBlockWithVariants<BlockF
         return VARIANT;
     }
 
-    public enum Type implements IStringSerializable
+    public enum Type implements ISimpleEnum
     {
-        ROSE("rose", MapColor.RED),
-        SHORT_PEONY("short_peony", MapColor.PINK);
+        ROSE(MapColor.RED),
+        SHORT_PEONY(MapColor.PINK);
 
-        private final String name;
         private final MapColor color;
 
-        Type(String name, MapColor color)
+        Type(MapColor color)
         {
-            this.name = name;
             this.color = color;
-        }
-
-        @Override
-        public String getName()
-        {
-            return name;
         }
 
         public MapColor getColor()

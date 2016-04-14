@@ -1,6 +1,7 @@
 package juuxel.uselessthings.common.util;
 
 import juuxel.uselessthings.lib.LibMisc;
+import net.minecraft.block.Block;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -9,7 +10,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public interface IBlockWithVariants<E extends Enum<E> & IStringSerializable> extends IBlock
+public interface IVariantBlock<E extends Enum<E> & IStringSerializable, B extends Block> extends IBlock<B>
 {
     @Override
     @SideOnly(Side.CLIENT)
@@ -25,7 +26,7 @@ public interface IBlockWithVariants<E extends Enum<E> & IStringSerializable> ext
             ModelResourceLocation location = new ModelResourceLocation(LibMisc.ID_LOWER + ":" + getModelName(e), "inventory");
             ModelLoader.registerItemVariants(item, location);
             ModelLoader.setCustomModelResourceLocation(item, e.ordinal(), location);
-            System.out.println(location.toString());
+            System.out.println(location.toString()); // TODO Remove debug
         }
     }
 
@@ -36,4 +37,7 @@ public interface IBlockWithVariants<E extends Enum<E> & IStringSerializable> ext
 
     default String getModelName(E e)
     { return e.getName(); }
+
+    interface Default<E extends Enum<E> & IStringSerializable> extends IVariantBlock<E, Block>
+    {}
 }

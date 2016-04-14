@@ -1,0 +1,6 @@
+{
+    "parent": "uselessthings:block/smoker",
+    "textures": {
+        "side": "blocks/brick"
+    }
+}

@@ -2,6 +2,7 @@ package juuxel.uselessthings.common.block;
 
 import juuxel.uselessthings.common.util.IBooleanBlock;
 import juuxel.uselessthings.lib.LibBlockNames;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -20,7 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
 
-public class BlockWoodenPlatform extends BlockUT implements IBooleanBlock
+public class BlockWoodenPlatform extends BlockUT implements IBooleanBlock.Default
 {
     public static PropertyBool FENCE = PropertyBool.create("fence");
 
@@ -101,7 +102,7 @@ public class BlockWoodenPlatform extends BlockUT implements IBooleanBlock
     @SideOnly(Side.CLIENT)
     public void initModel()
     {
-        IBooleanBlock.super.initModel();
+        IBooleanBlock.Default.super.initModel();
     }
 
     @Override

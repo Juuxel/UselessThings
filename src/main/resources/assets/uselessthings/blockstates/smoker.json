@@ -1,0 +1,7 @@
+{
+    "multipart": [
+        { "when": { "type": "ignore_redstone" }, "apply": { "model": "uselessthings:smoker_default"     } },
+        { "when": { "type": "not_powered"     }, "apply": { "model": "uselessthings:smoker_not_powered" } },
+        { "when": { "type": "powered"         }, "apply": { "model": "uselessthings:smoker_powered"     } }
+    ]
+}

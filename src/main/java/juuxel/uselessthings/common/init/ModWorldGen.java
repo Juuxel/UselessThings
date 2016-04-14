@@ -10,7 +10,7 @@ public class ModWorldGen
     {
         for (int i = 0; i < BlockFlower2.Type.values().length; i++)
         {
-            MinecraftForge.TERRAIN_GEN_BUS.register(new WorldGenFlower(ModBlocks.flower, ModBlocks.flower.getStateFromMeta(i)));
+            MinecraftForge.TERRAIN_GEN_BUS.register(new WorldGenFlower(ModBlocks.flower, ModBlocks.flower.asBlock().getStateFromMeta(i)));
         }
     }
 }
