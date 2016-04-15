@@ -2,6 +2,7 @@ package juuxel.uselessthings.common.block;
 
 import juuxel.uselessthings.common.util.ISimpleEnum;
 import juuxel.uselessthings.common.util.IVariantBlock;
+import juuxel.uselessthings.common.util.ItemStacks;
 import juuxel.uselessthings.lib.LibBlockNames;
 import juuxel.uselessthings.lib.TabUT;
 import net.minecraft.block.BlockBush;
@@ -77,7 +78,7 @@ public class BlockFlower2 extends BlockBush implements IVariantBlock<BlockFlower
     {
         for (int i = 0; i < Type.values().length; i++)
         {
-            list.add(new ItemStack(itemIn, 1, i));
+            list.add(ItemStacks.withMetadata(itemIn, i));
         }
     }
 

@@ -1,6 +1,7 @@
 package juuxel.uselessthings.common.block;
 
 import juuxel.uselessthings.common.util.IVariantBlock;
+import juuxel.uselessthings.common.util.ItemStacks;
 import juuxel.uselessthings.lib.LibBlockNames;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.SoundType;
@@ -91,7 +92,7 @@ public class BlockWoodenPost extends BlockUT implements IVariantBlock.Default<Bl
     {
         for (int i = 0; i < BlockPlanks.EnumType.values().length; i++)
         {
-            list.add(new ItemStack(itemIn, 1, i));
+            list.add(ItemStacks.withMetadata(itemIn, i));
         }
     }
 

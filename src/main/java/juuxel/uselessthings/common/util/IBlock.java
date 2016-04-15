@@ -22,6 +22,9 @@ public interface IBlock<B extends Block>
         return this instanceof Block ? (B) this : null;
     }
 
+    default Item asItem()
+    { return Item.getItemFromBlock(asBlock()); }
+
     default void setName(String name)
     {
         setUnlocalizedName(LibMisc.ID_LOWER + "." + name);

@@ -26,7 +26,6 @@ public interface IVariantBlock<E extends Enum<E> & IStringSerializable, B extend
             ModelResourceLocation location = new ModelResourceLocation(LibMisc.ID_LOWER + ":" + getModelName(e), "inventory");
             ModelLoader.registerItemVariants(item, location);
             ModelLoader.setCustomModelResourceLocation(item, e.ordinal(), location);
-            System.out.println(location.toString()); // TODO Remove debug
         }
     }
 

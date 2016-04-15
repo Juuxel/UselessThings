@@ -2,6 +2,7 @@ package juuxel.uselessthings.common.block;
 
 import juuxel.uselessthings.common.util.ISimpleEnum;
 import juuxel.uselessthings.common.util.IVariantBlock;
+import juuxel.uselessthings.common.util.ItemStacks;
 import juuxel.uselessthings.lib.LibBlockNames;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -65,7 +66,7 @@ public class BlockSmoker extends BlockUT implements IVariantBlock.Default<BlockS
     {
         for (int i = 0; i < Type.values().length - 1; i++)
         {
-            list.add(new ItemStack(itemIn, 1, i));
+            list.add(ItemStacks.withMetadata(itemIn, i));
         }
     }
 

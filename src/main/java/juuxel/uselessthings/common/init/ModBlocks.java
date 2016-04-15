@@ -10,12 +10,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.function.Function;
 
 public class ModBlocks
 {
-    private static final ArrayList<IBlock> BLOCKS = new ArrayList<>();
+    private static final HashSet<IBlock> BLOCKS = new HashSet<>();
 
     public static IBlock woodenPlatform;
     public static IBlock woodenStep;
