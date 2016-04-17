@@ -15,4 +15,5 @@ public final class LibBlockNames
     public static final String POST_POSTFIX = "_post";
     public static final String POWERED_POSTFIX = "_powered";
     public static final String POWERED_LANG_POSTFIX = ".powered";
+    public static final String STEP_POSTFIX = "_step";
 }

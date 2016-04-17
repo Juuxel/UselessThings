@@ -20,7 +20,7 @@ public interface IVariantBlock<E extends Enum<E> & IStringSerializable, B extend
 
         for (E e : getVariantProperty().getValueClass().getEnumConstants())
         {
-            if (!accept(e))
+            if (!doesInitModel(e))
                 continue;
 
             ModelResourceLocation location = new ModelResourceLocation(LibMisc.ID_LOWER + ":" + getModelName(e), "inventory");
@@ -31,7 +31,7 @@ public interface IVariantBlock<E extends Enum<E> & IStringSerializable, B extend
 
     PropertyEnum<E> getVariantProperty();
 
-    default boolean accept(@SuppressWarnings("unused") E e)
+    default boolean doesInitModel(@SuppressWarnings("unused") E e)
     { return true; }
 
     default String getModelName(E e)

@@ -32,7 +32,7 @@ public class ModBlocks
         smoker = new BlockSmoker();
 
         register(woodenPlatform, ItemBlockFenced::new);
-        register(woodenStep);
+        register(woodenStep, ItemBlockWood::new);
         register(woodenPost, ItemBlockWood::new);
         register(flower, ItemBlockFlower::new);
         register(smoker, ItemBlockSmoker::new);

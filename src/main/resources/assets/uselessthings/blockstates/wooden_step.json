@@ -1,5 +1,10 @@
 {
     "variants": {
-        "normal": { "model": "uselessthings:wooden_step" }
+        "variant=oak":      { "model": "uselessthings:oak_step"      },
+        "variant=spruce":   { "model": "uselessthings:spruce_step"   },
+        "variant=birch":    { "model": "uselessthings:birch_step"    },
+        "variant=jungle":   { "model": "uselessthings:jungle_step"   },
+        "variant=acacia":   { "model": "uselessthings:acacia_step"   },
+        "variant=dark_oak": { "model": "uselessthings:dark_oak_step" }
     }
 }

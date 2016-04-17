@@ -135,7 +135,7 @@ public class BlockSmoker extends BlockUT implements IVariantBlock.Default<BlockS
     }
 
     @Override
-    public boolean accept(Type type)
+    public boolean doesInitModel(Type type)
     {
         return type != Type.POWERED;
     }

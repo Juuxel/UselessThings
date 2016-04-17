@@ -1,9 +1,5 @@
 {
     "parent": "block/block",
-    "textures": {
-        "texture": "blocks/planks_oak",
-        "particle": "blocks/planks_oak"
-    },
     "elements": [
         {
             "from": [0, 4, 0],
@@ -18,7 +14,7 @@
             }
         },
         {   "from": [ 6, 0, 6 ],
-            "to": [ 10, 3, 10 ],
+            "to": [ 10, 4, 10 ],
             "faces": {
                 "down":  { "texture": "#texture", "cullface": "down" },
                 "up":    { "texture": "#texture" },

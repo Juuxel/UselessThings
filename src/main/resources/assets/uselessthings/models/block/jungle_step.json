@@ -1,0 +1,7 @@
+{
+    "parent": "uselessthings:block/wooden_step",
+    "textures": {
+        "texture": "blocks/planks_jungle",
+        "particle": "blocks/planks_jungle"
+    }
+}

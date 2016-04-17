@@ -1,10 +1,10 @@
 {
-    "multipart": [
-        { "when": { "variant": "oak"      }, "apply": { "model": "oak_fence_post"      } },
-        { "when": { "variant": "spruce"   }, "apply": { "model": "spruce_fence_post"   } },
-        { "when": { "variant": "birch"    }, "apply": { "model": "birch_fence_post"    } },
-        { "when": { "variant": "jungle"   }, "apply": { "model": "jungle_fence_post"   } },
-        { "when": { "variant": "acacia"   }, "apply": { "model": "acacia_fence_post"   } },
-        { "when": { "variant": "dark_oak" }, "apply": { "model": "dark_oak_fence_post" } }
-    ]
+    "variants": {
+        "variant=oak":      { "model": "oak_fence_post"      },
+        "variant=spruce":   { "model": "spruce_fence_post"   },
+        "variant=birch":    { "model": "birch_fence_post"    },
+        "variant=jungle":   { "model": "jungle_fence_post"   },
+        "variant=acacia":   { "model": "acacia_fence_post"   },
+        "variant=dark_oak": { "model": "dark_oak_fence_post" }
+    }
 }
