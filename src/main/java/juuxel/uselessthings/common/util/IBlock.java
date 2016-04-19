@@ -27,12 +27,11 @@ public interface IBlock<B extends Block>
 
     default void setName(String name)
     {
-        setUnlocalizedName(LibMisc.ID_LOWER + "." + name);
-        setRegistryName(name);
-    }
+        Block block = asBlock();
 
-    Block setRegistryName(String registryName);
-    Block setUnlocalizedName(String unlocalizedName);
+        block.setUnlocalizedName(LibMisc.ID_LOWER + "." + name);
+        block.setRegistryName(name);
+    }
 
     interface Default extends IBlock<Block>
     {}
